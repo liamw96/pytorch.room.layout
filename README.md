@@ -19,7 +19,7 @@ python segment_st.py test -d datasets/sunrgbd/ -c 37 --arch drn_d_105 -s 480 --r
 
 can be used to evaluate the sunrgbd network.
 
-trained [sunrgbd.pth.tar](https://drive.google.com/open?id=1-O45ENLICItubbah8osWkhe--BS-_of0)
+pre-trained [sunrgbd.pth.tar](https://drive.google.com/open?id=1-O45ENLICItubbah8osWkhe--BS-_of0)
 
 It should report 41.64 mIOU on SUNRGBD-val, with per-category IOU as
 
@@ -32,3 +32,15 @@ python segment_rl.py train -d datasets/lsun/ -c 4 -s 480 --arch drn_d_105 --batc
 can be used to train a room layout network by transfering representations trained on sunrgbd.
 
 It seems that the network quickly converges so only 10 epoches at a smaller learning rate are used.
+
+For evaluation,
+
+exectute 'mkdir features' in the root folder to store network outputs before softmax.
+
+pre-trained [lsun.pth.tar](?)
+
+Then use this command for evaluation:
+
+python segment_rl.py test -d datasets/lsun/ -c 4 --arch drn_d_105 -s 480 --resume lsun.pth.tar --phase val --batch-size 1 --ms
+
+The mIOU style performance should be reported as: 
