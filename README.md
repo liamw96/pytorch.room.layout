@@ -8,7 +8,7 @@ Download pre-processed SUNRGBD dataset at [sunrgbd.zip](https://drive.google.com
 
 Download pre-processed LSUN dataset at [lsun.zip](https://drive.google.com/open?id=15Kozyfz4ji2cslJ5WmCHUuRbXVObF8Zu)
 
-Execute 'mkdir datasets' in the root folder and unzip the dataset therein.
+Execute 'mkdir datasets' in the root folder and unzip the datasets therein.
 
 # Commands - SUNRGBD
 python segment_st.py train -d datasets/sunrgbd/ -c 37 -s 480 --arch drn_d_105 --batch-size 32 --random-scale 1.75 --random-rotate 15 --epochs 100 --lr 0.01 --momentum 0.9 --lr-mode poly
