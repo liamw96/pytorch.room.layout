@@ -13,6 +13,12 @@ python segment_st.py train -d datasets/sunrgbd/ -c 37 -s 480 --arch drn_d_105 --
 
 can be used to train a semantic segmentation network on sunrgbd.
 
-python segment_st.py test -d datasets/sunrgbd/ -c 37 --arch drn_d_105 -s 480 --resume model_best.pth.tar --phase val --batch-size 1 --ms
+python segment_st.py test -d datasets/sunrgbd/ -c 37 --arch drn_d_105 -s 480 --resume sunrgbd.pth.tar --phase val --batch-size 1 --ms
 
 can be used to evaluate the sunrgbd network.
+
+[trained sunrgbd.pth.tar](https://drive.google.com/open?id=1-O45ENLICItubbah8osWkhe--BS-_of0)
+
+It should report 41.64 mIOU on SUNRGBD-val, with per-category IOU as
+
+76.207 88.351 44.797 65.945 69.527 51.554 52.003 42.822 48.869 36.718 49.844 28.896 32.876 18.304 5.300 57.734 43.211 27.770 36.247 0.000 29.458 66.611 36.991 35.774 55.149 21.252 27.205 0.000 27.276 52.067 54.973 5.531 75.905 59.562 41.282 55.303 19.429
