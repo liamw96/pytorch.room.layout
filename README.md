@@ -17,7 +17,7 @@ python segment_st.py test -d datasets/sunrgbd/ -c 37 --arch drn_d_105 -s 480 --r
 
 can be used to evaluate the sunrgbd network.
 
-[trained sunrgbd.pth.tar](https://drive.google.com/open?id=1-O45ENLICItubbah8osWkhe--BS-_of0)
+trained [sunrgbd.pth.tar](https://drive.google.com/open?id=1-O45ENLICItubbah8osWkhe--BS-_of0)
 
 It should report 41.64 mIOU on SUNRGBD-val, with per-category IOU as
 
