@@ -37,7 +37,7 @@ For evaluation,
 
 exectute 'mkdir features' in the root folder to store network outputs before softmax.
 
-pre-trained [lsun.pth.tar](?)
+pre-trained [lsun.pth.tar](https://drive.google.com/open?id=1AsYK8jhprBYWnGm9L-UdruFhuKx2T--k)
 
 Then use this command for evaluation:
 
