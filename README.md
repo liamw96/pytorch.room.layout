@@ -25,23 +25,3 @@ It should report 41.64 mIOU on SUNRGBD-val, with per-category IOU as
 
 76.207 88.351 44.797 65.945 69.527 51.554 52.003 42.822 48.869 36.718 49.844 28.896 32.876 18.304 5.300 57.734 43.211 27.770 36.247 0.000 29.458 66.611 36.991 35.774 55.149 21.252 27.205 0.000 27.276 52.067 54.973 5.531 75.905 59.562 41.282 55.303 19.429
 
-# Commands - LSUN
-
-`python segment_rl.py train -d datasets/lsun/ -c 4 -s 480 --arch drn_d_105 --batch-size 32 --random-scale 1.75 --random-rotate 15 --epochs 10 --lr 0.001 --momentum 0.9 --lr-mode poly --pretrained sunrgbd.pth.tar`
-
-can be used to train a room layout network by transfering representations trained on sunrgbd.
-
-It seems that the network quickly converges so only 10 epoches at a smaller learning rate are used.
-
-For evaluation,
-
-exectute `mkdir features` in the root folder to store network outputs before softmax.
-
-pre-trained [lsun.pth.tar](https://drive.google.com/open?id=1AsYK8jhprBYWnGm9L-UdruFhuKx2T--k)
-
-Then use this command for evaluation:
-
-`python segment_rl.py test -d datasets/lsun/ -c 4 --arch drn_d_105 -s 480 --resume lsun.pth.tar --phase val --batch-size 1 --ms`
-
-The mIOU style performance should be reported as: 
-
