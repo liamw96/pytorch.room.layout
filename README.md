@@ -8,14 +8,14 @@ Download pre-processed SUNRGBD dataset at [sunrgbd.zip](https://drive.google.com
 
 Download pre-processed LSUN dataset at [lsun.zip](https://drive.google.com/open?id=15Kozyfz4ji2cslJ5WmCHUuRbXVObF8Zu)
 
-Execute '<mkdir datasets>' in the root folder and unzip the datasets therein.
+Execute `mkdir datasets` in the root folder and unzip the datasets therein.
 
 # Commands - SUNRGBD
-python segment_st.py train -d datasets/sunrgbd/ -c 37 -s 480 --arch drn_d_105 --batch-size 32 --random-scale 1.75 --random-rotate 15 --epochs 100 --lr 0.01 --momentum 0.9 --lr-mode poly
+`python segment_st.py train -d datasets/sunrgbd/ -c 37 -s 480 --arch drn_d_105 --batch-size 32 --random-scale 1.75 --random-rotate 15 --epochs 100 --lr 0.01 --momentum 0.9 --lr-mode poly`
 
 can be used to train a semantic segmentation network on sunrgbd.
 
-python segment_st.py test -d datasets/sunrgbd/ -c 37 --arch drn_d_105 -s 480 --resume sunrgbd.pth.tar --phase val --batch-size 1 --ms
+`python segment_st.py test -d datasets/sunrgbd/ -c 37 --arch drn_d_105 -s 480 --resume sunrgbd.pth.tar --phase val --batch-size 1 --ms`
 
 can be used to evaluate the sunrgbd network.
 
@@ -27,7 +27,7 @@ It should report 41.64 mIOU on SUNRGBD-val, with per-category IOU as
 
 # Commands - LSUN
 
-python segment_rl.py train -d datasets/lsun/ -c 4 -s 480 --arch drn_d_105 --batch-size 32 --random-scale 1.75 --random-rotate 15 --epochs 10 --lr 0.001 --momentum 0.9 --lr-mode poly --pretrained sunrgbd.pth.tar
+`python segment_rl.py train -d datasets/lsun/ -c 4 -s 480 --arch drn_d_105 --batch-size 32 --random-scale 1.75 --random-rotate 15 --epochs 10 --lr 0.001 --momentum 0.9 --lr-mode poly --pretrained sunrgbd.pth.tar`
 
 can be used to train a room layout network by transfering representations trained on sunrgbd.
 
@@ -35,15 +35,13 @@ It seems that the network quickly converges so only 10 epoches at a smaller lear
 
 For evaluation,
 
-exectute 'mkdir features' in the root folder to store network outputs before softmax.
+exectute `mkdir features` in the root folder to store network outputs before softmax.
 
 pre-trained [lsun.pth.tar](https://drive.google.com/open?id=1AsYK8jhprBYWnGm9L-UdruFhuKx2T--k)
 
 Then use this command for evaluation:
 
-python segment_rl.py test -d datasets/lsun/ -c 4 --arch drn_d_105 -s 480 --resume lsun.pth.tar --phase val --batch-size 1 --ms
+`python segment_rl.py test -d datasets/lsun/ -c 4 --arch drn_d_105 -s 480 --resume lsun.pth.tar --phase val --batch-size 1 --ms`
 
 The mIOU style performance should be reported as: 
 
-I think you should use an
-`<addr>` element here instead.
