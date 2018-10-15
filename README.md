@@ -1,14 +1,14 @@
 # Brief
 This code tries to implement the room layout estimation network described in
 
-[Physics Inspired Optimization on Semantic Transfer Features: An Alternative Method for Room Layout Estimation](http://openaccess.thecvf.com/content_cvpr_2017/html/Zhao_Physics_Inspired_Optimization_CVPR_2017_paper.html)
+[**Physics Inspired Optimization on Semantic Transfer Features: An Alternative Method for Room Layout Estimation**](http://openaccess.thecvf.com/content_cvpr_2017/html/Zhao_Physics_Inspired_Optimization_CVPR_2017_paper.html)
 
 # Data
 Download pre-processed SUNRGBD dataset at [sunrgbd.zip](https://drive.google.com/open?id=1oP0-n0AHW5mlfNrORLmQAAXqv0ByjIRg)
 
 Download pre-processed LSUN dataset at [lsun.zip](https://drive.google.com/open?id=15Kozyfz4ji2cslJ5WmCHUuRbXVObF8Zu)
 
-Execute 'mkdir datasets' in the root folder and unzip the datasets therein.
+Execute '<mkdir datasets>' in the root folder and unzip the datasets therein.
 
 # Commands - SUNRGBD
 python segment_st.py train -d datasets/sunrgbd/ -c 37 -s 480 --arch drn_d_105 --batch-size 32 --random-scale 1.75 --random-rotate 15 --epochs 100 --lr 0.01 --momentum 0.9 --lr-mode poly
@@ -44,3 +44,6 @@ Then use this command for evaluation:
 python segment_rl.py test -d datasets/lsun/ -c 4 --arch drn_d_105 -s 480 --resume lsun.pth.tar --phase val --batch-size 1 --ms
 
 The mIOU style performance should be reported as: 
+
+I think you should use an
+`<addr>` element here instead.
