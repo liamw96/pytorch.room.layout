@@ -7,3 +7,8 @@ Physics Inspired Optimization on Semantic Transfer Features: An Alternative Meth
 Download pre-processed SUNRGBD dataset at [sunrgbd.zip](https://drive.google.com/open?id=1oP0-n0AHW5mlfNrORLmQAAXqv0ByjIRg)
 
 Execute 'mkdir datasets' in the root folder and unzip the dataset therein.
+
+# Commands
+python segment_st.py train -d datasets/sunrgbd/ -c 37 -s 480 --arch drn_d_105 --batch-size 32 --random-scale 2 --random-rotate 10 --epochs 100 --lr 0.007 --momentum 0.9 --lr-mode poly
+
+can be used to train a semantic segmentation network on sunrgbd.
