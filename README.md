@@ -29,4 +29,4 @@ python segment_rl.py train -d datasets/lsun/ -c 4 -s 480 --arch drn_d_105 --batc
 
 can be used to train a room layout network by transfering representations trained on sunrgbd.
 
-It seems that the network quickly converges to 90+ pixel accuracy so only 10 epoches at a smaller learning rate are used.
+It seems that the network quickly converges so only 10 epoches at a smaller learning rate are used.
