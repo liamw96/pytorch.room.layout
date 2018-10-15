@@ -5,6 +5,7 @@ This code tries to implement the room layout estimation network described in
 
 # Data
 Download pre-processed SUNRGBD dataset at [sunrgbd.zip](https://drive.google.com/open?id=1oP0-n0AHW5mlfNrORLmQAAXqv0ByjIRg)
+Download pre-processed LSUN dataset at [lsun.zip](https://drive.google.com/open?id=15Kozyfz4ji2cslJ5WmCHUuRbXVObF8Zu)
 
 Execute 'mkdir datasets' in the root folder and unzip the dataset therein.
 
