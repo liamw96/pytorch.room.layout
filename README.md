@@ -49,4 +49,4 @@ The mIOU style performance should be reported as:
 
 Use the matlab script visualize.m, sample results are like:
 
-![GitHub Logo](/images/logo.png)
+![1](/pics/1.png)
