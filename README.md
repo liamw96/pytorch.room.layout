@@ -10,6 +10,10 @@ Download pre-processed LSUN dataset at [lsun.zip](https://drive.google.com/open?
 
 Execute `mkdir datasets` in the root folder and unzip the datasets therein.
 
+# Prerequisite
+
+The code is based upon [DRN](https://github.com/fyu/drn).
+
 # Commands - SUNRGBD
 `python segment_st.py train -d datasets/sunrgbd/ -c 37 -s 480 --arch drn_d_105 --batch-size 32 --random-scale 1.75 --random-rotate 15 --epochs 100 --lr 0.01 --momentum 0.9 --lr-mode poly`
 
@@ -57,3 +61,9 @@ Use the matlab script visualize.m, sample results are like:
 ![6](/pics/6.png)
 ![7](/pics/7.png)
 ![8](/pics/8.png)
+
+# Tips
+
+Pre-trained models use a 105-layer DRN.
+
+You can use smaller backbones or smaller batch sizes if troubled by GPU memory constraints.
