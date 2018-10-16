@@ -1,5 +1,5 @@
 # Brief
-This code tries to implement the room layout estimation network described in
+This code implements the room layout estimation network described in
 
 [**Physics Inspired Optimization on Semantic Transfer Features: An Alternative Method for Room Layout Estimation**](http://openaccess.thecvf.com/content_cvpr_2017/html/Zhao_Physics_Inspired_Optimization_CVPR_2017_paper.html)
 
