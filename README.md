@@ -14,6 +14,16 @@ Execute `mkdir datasets` in the root folder and unzip the datasets therein.
 
 The code is based upon [DRN](https://github.com/fyu/drn).
 
+Has been tested on:
+
+python 3.6.6
+torch 0.4.1
+gcc 7.2.0
+PIL 5.2.0
+cv2 3.1.0
+torchvision 0.2.1
+64-bit ubuntu 16.04.5 (4.4.0-103-generic)
+
 # Commands - SUNRGBD
 `python segment_st.py train -d datasets/sunrgbd/ -c 37 -s 480 --arch drn_d_105 --batch-size 32 --random-scale 1.75 --random-rotate 15 --epochs 100 --lr 0.01 --momentum 0.9 --lr-mode poly`
 
