@@ -17,11 +17,17 @@ The code is based upon [DRN](https://github.com/fyu/drn).
 Has been tested on:
 
 python 3.6.6
+
 torch 0.4.1
+
 gcc 7.2.0
+
 PIL 5.2.0
+
 cv2 3.1.0
+
 torchvision 0.2.1
+
 64-bit ubuntu 16.04.5 (4.4.0-103-generic)
 
 # Commands - SUNRGBD
