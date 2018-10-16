@@ -45,3 +45,8 @@ The mIOU style performance should be reported as:
 
 75.661 70.330 67.400 76.282
 
+# Visualizatoin
+
+Use the matlab script visualize.m, sample results are like:
+
+![GitHub Logo](/images/logo.png)
